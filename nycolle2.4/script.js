@@ -1,8 +1,6 @@
-//Firebase Imports
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
 import { getFirestore, collection, doc, getDoc, addDoc, query, orderBy, limit, getDocs } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
-// Firebase Configuration
 const firebaseConfig = {
     apiKey: "AIzaSyDMtMsEp0eXYvITiSTn7pBqvKwlFIHNQ78",
     authDomain: "nycolle24bd.firebaseapp.com",
@@ -14,18 +12,15 @@ const firebaseConfig = {
     measurementId: "G-J7TYPXRFL1"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 console.log("Firebase inicializado:", app.name);
 
-// App State
 let convidadoAtual = null;
 let indexAtual = 0;
 let pontuacao = 0;
 let quizConcluido = false;
 
-// Questions Data
 const perguntas = [
   {
     pergunta: "1. Série favorita?", alternativas: {
@@ -109,7 +104,6 @@ const perguntas = [
   },
 ];
 
-// Helper Functions
 function formatarTelefone(telefone) {
   const numeros = telefone.replace(/\D/g, '');
   if (numeros.length === 10 || numeros.length === 11) {
@@ -119,7 +113,6 @@ function formatarTelefone(telefone) {
   return null;
 }
 
-// Main Functions
 async function verificarConvidado() {
   const telefoneInput = document.getElementById('loginInputField').value.trim();
   const telefoneFormatado = formatarTelefone(telefoneInput);
@@ -162,7 +155,6 @@ async function verificarConvidado() {
 
 async function salvarPontuacao() {
   try {
-    // Salva a pontuação no Firestore
     await addDoc(collection(db, "pontuacoes"), {
       nome: convidadoAtual.nome,
       telefone: convidadoAtual.telefone,
@@ -170,8 +162,7 @@ async function salvarPontuacao() {
       data: new Date()
     });
 
-    // Agora mostra o leaderboard após salvar
-    await mostrarLeaderboard();  // Assegura que o leaderboard seja exibido após a pontuação ser salva
+    await mostrarLeaderboard();  
   } catch (error) {
     console.error("Erro ao salvar pontuação:", error);
   }
@@ -210,7 +201,6 @@ async function mostrarLeaderboard() {
       mostrarTela('guest');
       quizConcluido = true;
       
-      // Altera o banner do quiz para mostrar o leaderboard
       const banner = document.getElementById('bannerQuizz');
       banner.innerHTML = '<h2>Ver Leaderboard</h2><p>Confira as melhores pontuações!</p>';
       banner.onclick = () => {
@@ -222,14 +212,12 @@ async function mostrarLeaderboard() {
 
     leaderboard.appendChild(voltarBtn);
     
-    // Esconde o quiz e mostra o leaderboard
     document.getElementById('quizz').style.display = "none";
     document.body.appendChild(leaderboard);
     document.getElementById('leaderboard').style.display = "block";
     
   } catch (error) {
     console.error("Erro ao carregar leaderboard:", error);
-    // Fallback simples se houver erro
     alert(`Sua pontuação: ${pontuacao}\n\nO leaderboard não pôde ser carregado.`);
     document.getElementById('quizz').style.display = "none";
     mostrarTela('guest');
@@ -264,7 +252,6 @@ function mostrarTela(idTela) {
 
 function mostrarQuizz() {
   if (quizConcluido) {
-    // Se o quiz já foi concluído, mostra o leaderboard
     document.getElementById('guest').style.display = "none";
     document.body.appendChild(document.getElementById('leaderboard'));
     document.getElementById('leaderboard').style.display = "block";
@@ -302,7 +289,6 @@ function responder(alternativa) {
     const quizzDiv = document.getElementById('quizz');
     quizzDiv.classList.add('fade-out');
   
-    // Espera o fade-out terminar para salvar pontuação e mostrar leaderboard
       quizzDiv.addEventListener('animationend', function handler() {
       quizzDiv.classList.remove('fade-out');
       quizzDiv.removeEventListener('animationend', handler);
@@ -311,9 +297,7 @@ function responder(alternativa) {
   
 }
 
-// Initialize App
 document.addEventListener('DOMContentLoaded', () => {
-  // Initialize Vanta.js
   VANTA.FOG({
     el: "#vanta-bg",
     mouseControls: true,
@@ -330,7 +314,6 @@ document.addEventListener('DOMContentLoaded', () => {
     zoom: 0.5
   });
 
-  // Set up event listeners
   document.getElementById('verificarUser').addEventListener('click', verificarConvidado);
   document.getElementById('bannerQuizz').addEventListener('click', mostrarLeaderboard);
   
@@ -341,7 +324,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
   
-  // Permite enviar com Enter
   document.getElementById('loginInputField').addEventListener('keypress', function(e) {
     if (e.key === 'Enter') {
       verificarConvidado();

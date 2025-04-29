@@ -2,14 +2,14 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebas
 import { getFirestore, collection, doc, getDoc, addDoc, query, orderBy, limit, getDocs } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDMtMsEp0eXYvITiSTn7pBqvKwlFIHNQ78",
-    authDomain: "nycolle24bd.firebaseapp.com",
-    databaseURL: "https://nycolle24bd-default-rtdb.firebaseio.com",
-    projectId: "nycolle24bd",
-    storageBucket: "nycolle24bd.appspot.com",
-    messagingSenderId: "52286560042",
-    appId: "1:52286560042:web:62a1239f841ff11beeb053",
-    measurementId: "G-J7TYPXRFL1"
+    apiKey: "",
+    authDomain: "",
+    databaseURL: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: "",
+    appId: "",
+    measurementId: ""
 };
 
 const app = initializeApp(firebaseConfig);

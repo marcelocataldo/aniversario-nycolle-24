@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="https://nycolle24.netlify.app/nyc.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="1024">
+    <title>Nycolle 2.4</title>
+    <link rel="icon" href="icon.png">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <div id="vanta-bg" style="width: 100%; height: 100vh; position: absolute; top: 0; left: 0; z-index: -1;"></div>
+
+    <div id="login">
+
+        <div id="loginContainer">
+
+            <p class="convite-subtitulo">Área do convidado</p>
+            <h2 class="convite-titulo">&#9733   Golden Ticket   &#9733</h2>
+            <hr>
+            <h1 class="aniversariante">Nycolle Miranda</h1>
+            <p class="detalhes">24 anos, 24 shots</p>
+            <hr>
+            <div id="loginInput">
+                <p id="loginInputText">Digite seu telefone (com DDD)</p>
+                <input id="loginInputField" type="tel" placeholder="219XXXXXXXX">
+                <button id="verificarUser">Verificar</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="guest">
+
+        <div id="guestContainer">
+
+            <p>Bem vindo(a) <output id="nomeGuest">fulano silva</output>! Esse é o seu</p>
+            <h2>&#9733 Golden Ticket &#9733</h2>
+            <hr>
+            <h2>Local e Hora</h2>
+            <p>Rua General Pereira da Silva, 290 - Icaraí <br> Churrasqueira</p>
+            <a href="https://m.uber.com/ul/?client_id=G6-S3Q-YoZBUhmezZkjmtEg9R542qCFz&action=setPickup&pickup=my_location&dropoff[latitude]=-22.900299819358963&dropoff[longitude]=-43.10849178295713" style="text-decoration: none;"><button id="btnUber">Pedir Uber<svg id="iconUber" fill="#C5A537" viewBox="-2.4 -2.4 28.80 28.80" xmlns="http://www.w3.org/2000/svg" stroke="#C5A537"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="m22.178.001h.023c.495 0 .943.205 1.262.536v.001c.331.319.536.767.536 1.262v.024-.001 20.357.023c0 .495-.205.943-.536 1.262h-.001c-.319.331-.767.536-1.262.536-.008 0-.016 0-.025 0h.001-20.356c-.007 0-.015 0-.023 0-.495 0-.943-.205-1.262-.536v-.001c-.331-.319-.536-.767-.536-1.262 0-.008 0-.016 0-.025v.001-20.357c0-.007 0-.015 0-.023 0-.495.205-.943.536-1.262h.001c.319-.331.767-.536 1.262-.536h.025-.001zm-9.428 19.231c1.33-.146 2.526-.626 3.53-1.354l-.021.015c1.03-.734 1.842-1.71 2.363-2.848l.018-.044c.401-.85.636-1.847.636-2.899 0-.281-.017-.558-.049-.831l.003.033c-.1-1.27-.526-2.424-1.194-3.399l.015.024c-.672-.988-1.554-1.784-2.586-2.338l-.039-.019c-.984-.54-2.156-.858-3.402-.858-.008 0-.017 0-.025 0h.001c-.008 0-.018 0-.028 0-1.246 0-2.417.317-3.438.876l.037-.019c-1.07.573-1.952 1.369-2.609 2.332l-.016.025c-.647.936-1.072 2.071-1.177 3.297l-.002.026h5.036v-1.071c0-.003 0-.007 0-.01 0-.101.041-.192.107-.258.066-.066.157-.107.258-.107h.011-.001 3.643.01c.101 0 .192.041.258.107.066.066.107.157.107.258v.011-.001 3.643.01c0 .101-.041.192-.107.258-.066.066-.157.107-.258.107-.004 0-.007 0-.011 0h.001-3.644c-.003 0-.007 0-.01 0-.101 0-.192-.041-.258-.107-.066-.066-.107-.157-.107-.258 0-.004 0-.007 0-.011v.001-1.072h-5.035c.146 1.33.626 2.526 1.354 3.53l-.015-.021c.734 1.031 1.71 1.845 2.848 2.366l.044.018c.861.402 1.869.637 2.932.637.288 0 .573-.017.852-.051l-.034.003z"></path></g></svg></button></a>
+            <div id="quando">
+                <div id="data">
+                    <p>Sábado</p>
+                    <h2>19</h2>
+                    <p>Abril</p>
+                </div>
+                <hr>
+                <div id="hora">
+                    <p>Às</p>
+                    <h2>13:30</h2>
+                </div>
+            </div>
+            <hr>
+            <div id="bannerQuizz">
+                <h2>Quizz da Nycolle!</h2>
+                <p>Teste seus conhecimentos e concorra a uma garrafa de Bananinha! ... ou um block...</p>
+            </div>
+            <!--<hr>
+            <h2>PlayLists <svg id="iconSpotify" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>spotify [#162]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-140.000000, -7479.000000)" fill="#C5A537"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M99.915,7327.865 C96.692,7325.951 91.375,7325.775 88.297,7326.709 C87.803,7326.858 87.281,7326.58 87.131,7326.085 C86.981,7325.591 87.26,7325.069 87.754,7324.919 C91.287,7323.846 97.159,7324.053 100.87,7326.256 C101.314,7326.52 101.46,7327.094 101.196,7327.538 C100.934,7327.982 100.358,7328.129 99.915,7327.865 L99.915,7327.865 Z M99.81,7330.7 C99.584,7331.067 99.104,7331.182 98.737,7330.957 C96.05,7329.305 91.952,7328.827 88.773,7329.792 C88.36,7329.916 87.925,7329.684 87.8,7329.272 C87.676,7328.86 87.908,7328.425 88.32,7328.3 C91.951,7327.198 96.466,7327.732 99.553,7329.629 C99.92,7329.854 100.035,7330.334 99.81,7330.7 L99.81,7330.7 Z M98.586,7333.423 C98.406,7333.717 98.023,7333.81 97.729,7333.63 C95.381,7332.195 92.425,7331.871 88.944,7332.666 C88.609,7332.743 88.274,7332.533 88.198,7332.197 C88.121,7331.862 88.33,7331.528 88.667,7331.451 C92.476,7330.58 95.743,7330.955 98.379,7332.566 C98.673,7332.746 98.766,7333.129 98.586,7333.423 L98.586,7333.423 Z M94,7319 C88.477,7319 84,7323.477 84,7329 C84,7334.523 88.477,7339 94,7339 C99.523,7339 104,7334.523 104,7329 C104,7323.478 99.523,7319.001 94,7319.001 L94,7319 Z" id="spotify-[#162]"> </path> </g> </g> </g> </g></svg></h2>
+            <div id="playlistsContainer">
+                <div id="pop" class="bannerGenero"></div>
+                <div id="samba" class="bannerGenero"></div>
+                <div id="sertanejo" class="bannerGenero"></div>
+                <div id="funk" class="bannerGenero"></div>
+              </div> -->
+
+        </div>
+    </div>
+
+    <div id="quizz">
+        <div id="quizzContainer">
+            <div id="perguntas">
+                <h2><output id="textoPergunta"></output>
+                </h2>
+                <hr>
+            </div>
+            <div id="alternativas">
+
+                <button id="alternativaA" class="altBtn"></button>
+                <button id="alternativaB" class="altBtn"></button>
+                <button id="alternativaC" class="altBtn"></button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+
+    <script type="module" src="script.js"></script>
+    
+</body>
+</html>
